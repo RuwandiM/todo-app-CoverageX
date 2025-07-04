@@ -51,14 +51,14 @@ function TodoList() {
                         </button>
                     </form>
                 </div>
-                <div class="verticle-line"></div>
+                <div className="verticle-line"></div>
                 <div className="todo-list-container">
                     {todoList
                         .filter(item => !item.isDone)
                         .sort((a, b) => b.createdAt - a.createdAt)
                         .slice(0, 5)
                         .map((item, index) => (
-                            <div className="todo-item-container">
+                            <div className="todo-item-container" key={index}>
                                 <div className="item-details-container">
                                     <span className="todo-item-title">{item.title}</span>
                                     <br />
