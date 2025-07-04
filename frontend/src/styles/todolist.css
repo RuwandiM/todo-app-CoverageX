@@ -1,0 +1,135 @@
+.container {
+    padding: 75px 100px;
+}
+
+.todolist-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.add-todo-form-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.add-todo-form-title {
+    font-weight: 700;
+    color: #3A3960;
+}
+
+.add-todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-todo-form input, textarea {
+    border: 1px solid #d5d0ff;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Poppins;
+}
+
+.add-todo-form textarea:focus, input:focus{
+    outline: none;
+}
+
+.todo-form-button {
+    color: white;
+    background-color: #3A3960;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.todo-form-button:hover {
+    background-color: #5e5b85;
+}
+
+.verticle-line {
+  border-left: 1px solid #d5d0ff;
+  height: 475px;
+}
+
+.todo-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px 10px 50px;
+    flex: 1;
+}
+
+.todo-item-container {
+    border: 1px solid #d5d0ff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo-item-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    color: #3A3960;
+}
+
+.todo-item-description {
+    font-size: 13px;
+    color: #3A3960;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: center;
+    align-items: flex-end;
+    padding-left: 10px;
+}
+
+.todo-complete-button {
+    background-color: transparent;
+    border: 1px solid #3A3960;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.todo-complete-button:hover {
+    color: white;
+    border: 1px solid #d5d0ff;
+    background-color: #3A3960;
+}
+
+@media (max-width: 900px) {
+    .container{
+        padding: 20px;
+    }
+
+    .todolist-container {
+        flex-direction: column;
+    }
+
+    .verticle-line{
+        height: 0px;
+    }
+
+    .add-todo-form-container {
+        padding: 20px 0px;
+        width: 100%;
+    }
+
+    .todo-list-container{
+        padding: 50px 0px;
+        width: 100%;
+    }
+}
