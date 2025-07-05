@@ -6,7 +6,7 @@ createTodo = async (req, res) => {
     if (!title || !description) return res.status(400).json({ error: 'Missing fields' });
 
     const id = await Todo.addTodo(title, description);
-    res.status(201).json({ id, message: 'Todo added successfully' });
+    res.status(201).json({ id: id, message: 'Todo added successfully' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
