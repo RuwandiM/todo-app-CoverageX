@@ -13,3 +13,11 @@ code {
   font-family: 'Poppins', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --dark-purple: #3A3960;
+  --light-purple: #d5d0ff;
+  --purple: #5e5b85;
+  --red: #a80505;
+  --white: #fff;
+}
