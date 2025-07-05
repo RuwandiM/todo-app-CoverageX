@@ -15,13 +15,13 @@ describe('Todo controller', () => {
         it('should return 201 if todo is created successfully', async () => {
             const req = httpMocks.createRequest({ body: {title: 'title', description: 'description'} });
             const res = httpMocks.createResponse();
-            Todo.addTodo.mockResolvedValue(1);
+            Todo.createTodo.mockResolvedValue(1);
             await controller.createTodo(req, res);
             expect(res.statusCode).toBe(201);
             expect(res._getJSONData()).toHaveProperty('id', 1);
         });
         it('should return 500 on error', async () => {
-            Todo.addTodo.mockRejectedValue(new Error('fail'));
+            Todo.createTodo.mockRejectedValue(new Error('fail'));
             const req = httpMocks.createRequest({ body: {title: 'title', description: 'description'} });
             const res = httpMocks.createResponse();
             await controller.createTodo(req, res);

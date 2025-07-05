@@ -7,7 +7,7 @@ jest.mock('../../models/todoModel');
 describe('Todo Routes', () => {
   describe('POST /api/todo', () => {
     it('should create a todo', async () => {
-      model.addTodo.mockResolvedValue(1);
+      model.createTodo.mockResolvedValue(1);
       const res = await request(app)
         .post('/api/todo')
         .send({ title: 'title', description: 'description' });
@@ -19,7 +19,7 @@ describe('Todo Routes', () => {
       expect(res.statusCode).toBe(400);
     });
     it('should return 500 on error', async () => {
-      model.addTodo.mockRejectedValue(new Error('fail'));
+      model.createTodo.mockRejectedValue(new Error('fail'));
       const res = await request(app)
         .post('/api/todo')
         .send({ title: 'title', description: 'description' });

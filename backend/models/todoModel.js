@@ -1,6 +1,6 @@
 const db = require('../config/db');
 
-const addTodo = async (title, description) => {
+const createTodo = async (title, description) => {
   try {
     const [result] = await db.query(
       'INSERT INTO task (title, description, isDone, created_at) VALUES (?, ?, ?, NOW())',
@@ -35,4 +35,4 @@ const updateTodoStatus = async (id) => {
   }
 };
 
-module.exports = { addTodo, getRecentTodos, updateTodoStatus };
+module.exports = { createTodo, getRecentTodos, updateTodoStatus };

@@ -28,7 +28,7 @@ function TodoList() {
         fetchTodos();
     }, []);
 
-    const addTodo = async (e) => {
+    const createTodo = async (e) => {
         const newErrors = {};
         e.preventDefault();
         if(title == '') {
@@ -76,7 +76,7 @@ function TodoList() {
             <div className="todolist-container">
                 <div className="add-todo-form-container">
                     <p className="add-todo-form-title">Add a task</p>
-                    <form className="add-todo-form" onSubmit={addTodo}>
+                    <form className="add-todo-form" onSubmit={createTodo}>
                         <input 
                             type="text" 
                             name="title" 

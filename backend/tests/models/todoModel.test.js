@@ -9,15 +9,15 @@ describe('Todo Model', () => {
     describe('Todo Model', () => {
         afterEach(() => jest.clearAllMocks());
 
-        describe('addTodo', () => {
+        describe('createTodo', () => {
             it('should insert todo and return insertId', async () => {
                 db.query.mockResolvedValueOnce([{ insertId: 12 }]);
-                const id = await model.addTodo('title', 'description');
+                const id = await model.createTodo('title', 'description');
                 expect(id).toBe(12);
             });
             it('should throw on db error', async () => {
                 db.query.mockRejectedValueOnce(new Error('fail'));
-                await expect(model.addTodo('title', 'description')).rejects.toThrow('Database error');
+                await expect(model.createTodo('title', 'description')).rejects.toThrow('Database error');
             });
         });
     });
