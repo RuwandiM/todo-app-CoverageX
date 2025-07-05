@@ -122,7 +122,7 @@ function TodoList() {
                                     <span className="todo-item-description">{item.description}</span>
                                 </div>
                                 <div className="button-container">
-                                    <button className="todo-complete-button" onClick={() => markAsDone(index, item.id)}>
+                                    <button className="todo-complete-button" aria-label="Done" onClick={() => markAsDone(index, item.id)}>
                                         Done
                                     </button>
                                 </div>
